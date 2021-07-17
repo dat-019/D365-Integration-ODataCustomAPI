@@ -22,3 +22,6 @@ The solution desmontrates building a custom OData API for integrating data betwe
  
 ## 5. APIConsumer project
  The console application is the custom API consumer desmonstrating how to invoke custom API methods.
+
+## Reference
+Token-based authentication web API with OWIN framework: https://dotnettutorials.net/lesson/token-based-authentication-web-api/
