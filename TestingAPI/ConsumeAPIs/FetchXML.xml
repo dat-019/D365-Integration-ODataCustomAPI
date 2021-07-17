@@ -1,0 +1,18 @@
+<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+  <entity name="c30seeds_nhanvien">
+    <attribute name="c30seeds_name" />
+    <attribute name="c30seeds_taikhoan" />
+    <attribute name="c30seeds_san" />
+    <attribute name="c30seeds_phongkd" />
+    <attribute name="c30seeds_manv" />
+    <attribute name="c30seeds_nhanvienid" />
+    <order attribute="c30seeds_name" descending="false" />
+    <filter type="and">
+      <condition attribute="statecode" operator="eq" value="0" />
+      <filter type="or">
+        <condition attribute="c30seeds_san" operator="eq-businessid" />
+        <condition attribute="c30seeds_phongkd" operator="eq-businessid" />
+      </filter>
+    </filter>
+  </entity>
+</fetch>
