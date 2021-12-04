@@ -12,7 +12,7 @@ namespace APIConsumer
     {
         static void Main(string[] args)
         {
-            //get api from 
+            //get api
             string apiAccessToken = AcquireAPIAccessToken.GetAPIToken(); //acquire the API access token
 
             IConsumeCustomAPI consumeCustomAPI = new ConsumeCustomAPI(apiAccessToken);

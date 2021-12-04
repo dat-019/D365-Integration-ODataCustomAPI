@@ -71,13 +71,13 @@ namespace APIService.Provider.CustomAPIController
                     else if (message.Contains("invalid username or password"))
                         return new HttpResponseMessage(HttpStatusCode.Unauthorized)
                         {
-                            Content = new StringContent("Mật khẩu cũ không chính xác!", Encoding.UTF8, MediaType.Json),
+                            Content = new StringContent("The old password is incorrect!", Encoding.UTF8, MediaType.Json),
                             RequestMessage = request
                         };
                     else if (message.Contains("specified password does not comply with password complexity requirements"))
                         return new HttpResponseMessage(HttpStatusCode.Unauthorized)
                         {
-                            Content = new StringContent("Vui lòng nhập mật khẩu đúng với các điều kiện sau: Tối thiểu 8 kí tự. Có số, chữ và kí tự đặc biệt", Encoding.UTF8, MediaType.Json),
+                            Content = new StringContent("The password has to contain the following character condition: At least 8 characters, including number, normal and special characters", Encoding.UTF8, MediaType.Json),
                             RequestMessage = request
                         };
                     else
